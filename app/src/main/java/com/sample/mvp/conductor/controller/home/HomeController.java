@@ -1,6 +1,7 @@
 package com.sample.mvp.conductor.controller.home;
 
 
+import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -18,8 +19,10 @@ import com.bluelinelabs.conductor.ControllerChangeHandler;
 import com.bluelinelabs.conductor.ControllerChangeType;
 import com.bluelinelabs.conductor.RouterTransaction;
 import com.bluelinelabs.conductor.changehandler.FadeChangeHandler;
+import com.sample.mvp.conductor.MainActivity;
 import com.sample.mvp.conductor.R;
 
+import com.sample.mvp.conductor.SecondActivity;
 import com.sample.mvp.conductor.base.BaseController;
 import com.sample.mvp.conductor.controller.second.SecondController;
 
@@ -94,6 +97,10 @@ public class HomeController extends BaseController implements HomeView {
                         .pushChangeHandler(new FadeChangeHandler())
                         .popChangeHandler(new FadeChangeHandler()));
                 break;
+            case LOGIN_CONTROLLER:
+                Intent intent = new Intent(getActivity(), SecondActivity.class);
+                startActivity(intent);
+                break;
         }
     }
 
@@ -137,16 +144,6 @@ public class HomeController extends BaseController implements HomeView {
             public ViewHolder(View itemView) {
                 super(itemView);
                 ButterKnife.bind(this, itemView);
-                /*if(tvTitle == null){
-                    tvTitle = itemView.findViewById(R.id.tv_title);
-                    imgDot = itemView.findViewById(R.id.img_dot);
-                    itemView.findViewById(R.id.row_root).setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            onModelRowClick(model, position);
-                        }
-                    });
-                }*/
             }
 
             void bind(int position, HomeModel item) {

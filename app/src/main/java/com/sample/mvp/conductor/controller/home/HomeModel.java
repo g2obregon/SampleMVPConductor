@@ -5,7 +5,8 @@ import android.support.annotation.ColorRes;
 import com.sample.mvp.conductor.R;
 
 enum HomeModel {
-        CHILD_CONTROLLERS("Second Controllers", R.color.orange_300);
+        CHILD_CONTROLLERS("Second Controllers", R.color.orange_300),
+        LOGIN_CONTROLLER("Login Controllers", R.color.cyan_300);
 
         String title;
         @ColorRes

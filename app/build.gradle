@@ -33,6 +33,7 @@ dependencies {
     compile 'com.android.support:support-vector-drawable:26.+'
     compile 'com.android.support:animated-vector-drawable:26.+'
     compile 'com.android.support:design:26.+'
+    compile 'com.bluelinelabs:conductor-support:2.1.4'
 
     //testCompile 'junit:junit:4.12'
 }
