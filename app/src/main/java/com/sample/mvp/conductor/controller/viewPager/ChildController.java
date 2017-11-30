@@ -1,4 +1,4 @@
-package com.sample.mvp.conductor.controller;
+package com.sample.mvp.conductor.controller.viewPager;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
